@@ -1,0 +1,11 @@
+https://github.com/nubick/unity-utils/blob/master/sources/Assets/Scripts/Shaders/Sprites-Default.shader
+маска с кучей параметров
+
+https://www.youtube.com/watch?v=xkcCWqifT9M
+2D тени
+
+https://www.youtube.com/watch?v=iBWwNHEHo3I
+Unity 2D Water Reflection
+
+https://helpx.adobe.com/illustrator/using/gradients.html
+градиент
