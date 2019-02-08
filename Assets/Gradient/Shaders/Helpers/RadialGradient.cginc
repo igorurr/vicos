@@ -27,85 +27,103 @@ bool isx(
 
 
 
-float CalculateT1isx(
-    float2  _c,
-    float2  _d,
-    float2  _b
-){
-    return ( _c.x * _d.y - _d.x * _c.y ) / ( _c.x - _d.x ) - _b.y;
-}
-
-float CalculateT1isy(
-    float2  _c,
-    float2  _d,
-    float2  _b
-){
-    return ( _c.x * _d.y - _d.x * _c.y ) / ( _d.y - _c.y ) - _b.x;
-}
-
-
-
-float CalculateT2isx(
-    float2  _c,
-    float2  _d
-){
-    return ( _d.y - _c.y ) / ( _d.x - _c.x );
-}
-
-float CalculateT2isy(
-    float2  _c,
-    float2  _d
-){
-    return ( _d.x - _c.x ) / ( _d.y - _c.y );
-}
-
-
-
-float CalculateDisx(
-    float   _t1,
-    float   _t2,
-    float   _r,
-    float2  _b
-){
-    return sqr( 2 * _t1 * _t2 - 2 * _b.x ) - 4 * ( 1 + _t2 * _t2 ) * ( _b.x * _b.x - _r * _r + _t1 * _t1 );
-}
-
-float CalculateDisy(
-    float   _t1,
-    float   _t2,
-    float   _r,
-    float2  _b
-){
-    return sqr( 2 * _t1 * _t2 - 2 * _b.y ) - 4 * ( 1 + _t2 * _t2 ) * ( _b.y * _b.y - _r * _r + _t1 * _t1 );
-}
-
-
-
-float2 CalculateEisx(
-    float   _t1,
-    float   _t2,
-    float   _D,
-    float2  _b
-){
-    float x = ( 2 * _b.x - 2 * _t2 * _t1 + sqrt(_D) ) / ( 1 + _t2 * _t2 );
+float3 CalcT1T2T3isx(
+    float2 _b,
+    float2 _c,
+    float2 _d
+) {
+    float firstPath = ( _c.x * _d.y - _d.x * _c.y );
     
-    float y = x * _t2 + _t1 + _b.y;
+    float secondPath = _c.y - _d.y;
     
-    return float2( x, y );
+    float delim = _c.x - _d.x;
+
+    float t1 = firstPath / delim;
+    
+    float t2 = secondPath / delim;
+
+    float t3 = t1 - _b.y;
+
+    return float3( t1, t2, t3 );
 }
 
-float2 CalculateEisy(
-    float   _t1,
-    float   _t2,
-    float   _D,
-    float2  _b
-){
-    float y = ( 2 * _b.y - 2 * _t2 * _t1 + sqrt(_D) ) / ( 1 + _t2 * _t2 );
+float3 CalcT1T2T3isy(
+    float2 _b,
+    float2 _c,
+    float2 _d
+) {
+    float firstPath = ( _c.x * _d.y - _d.x * _c.y );
     
-    float x = y * _t2 + _t1 + _b.x;
+    float secondPath = _d.x - _c.x;
     
-    return float2( x, y );
+    float delim = _d.y - _c.y;
+
+    float t1 = firstPath / delim;
+    
+    float t2 = secondPath / delim;
+
+    float t3 = t1 - _b.x;
+
+    return float3( t1, t2, t3 );
 }
+
+
+
+float3 CalcSQABCisx(
+    float2 _b,
+    float2 _r,
+    float  _t2,
+    float  _t3
+) {
+    float sqa = sqr( _r.y ) + sqr( _r.x * _t2 );
+    
+    float sqb = 2 * _b.x * sqr( _r.y ) - 2 * sqr( _r.x ) * _t2 * _t3;
+
+    float sqc = sqr( _r.y * _b.x ) + sqr( _r.x * _t3 ) - sqr( _r.x * _r.y );
+
+    return float3( sqa, sqb, sqc );
+}
+
+float3 CalcSQABCisy(
+    float2 _b,
+    float2 _r,
+    float  _t2,
+    float  _t3
+) {
+    float sqa = sqr( _r.x ) + sqr( _r.y * _t2 );
+    
+    float sqb = 2 * _b.y * sqr( _r.x ) - 2 * sqr( _r.y ) * _t2 * _t3;
+
+    float sqc = sqr( _r.x * _b.y ) + sqr( _r.y * _t3 ) - sqr( _r.x * _r.y );
+
+    return float3( sqa, sqb, sqc );
+}
+
+// передаются параметры квадратного уравнения: a, -b, c
+// ВАЖНО: b передаётся именно со знаком -
+// возвращается один корень со знаком - или + , этот момент пока не ясен
+float CalcSqareEquation(
+    float3 _sqABC
+) {
+    float sqrtD = sqrt( sqr( _sqABC.y ) - 4 * _sqABC.x * _sqABC.z );
+    
+    float sqb = 2 * _b.y * sqr( _r.x ) - 2 * sqr( _r.y ) * _t2 * _t3;
+
+    float sqc = sqr( _r.x * _b.y ) + sqr( _r.y * _t3 ) - sqr( _r.x * _r.y );
+
+    return ( _sqABC.b + sqrtD ) / ( 2 * _sqABC.x );
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -120,25 +138,31 @@ float4 CalculateColorFromPointRadialGradient(
 {
     float2 b = float2( _gradientParams[0], _gradientParams[1] );
     float2 c = float2( _gradientParams[2], _gradientParams[3] );
-    float2 r = _gradientParams[4];
+    float2 r = float2( _gradientParams[4], _gradientParams[5] );
     
     float  l;
     
     // проверка, какой знаменатель больше
     // вычисления пойдут по той ветви где знаменатель по модулю больше
     if ( isx( c, _d ) ) {
-        float  t1 = CalculateT1isx( c, _d, b );
-        float  t2 = CalculateT2isx( c, _d );
-        float  D = CalculateDisx( t1, t2, r, b );
-        float2 e = CalculateEisx( t1, t2, D, b );
-        l = lexp( e.x, c.x, _d.x );
+        float3  t123 = CalcT1T2T3isx( b, c, d );
+
+        float3  sqABC = CalcSQABCisx( b, r, t123.y, t123.z );
+
+        // вычисляем координату x точки e
+        float  ex = CalcSqareEquation( sqABC );
+
+        l = lexp( ex, c.x, _d.x );
     }
     else {
-        float  t1 = CalculateT1isy( c, _d, b );
-        float  t2 = CalculateT2isy( c, _d );
-        float  D = CalculateDisy( t1, t2, r, b );
-        float2 e = CalculateEisy( t1, t2, D, b );
-        l = lexp( e.y, c.y, _d.y );
+        float3  t123 = CalcT1T2T3isy( b, c, d );
+
+        float3  sqABC = CalcSQABCisy( b, r, t123.y, t123.z );
+
+        // вычисляем координату y точки e
+        float  ey = CalcSqareEquation( sqABC );
+
+        l = lexp( ey, c.y, _d.y );
     }
     
     return CalculateColorOnLine( 
