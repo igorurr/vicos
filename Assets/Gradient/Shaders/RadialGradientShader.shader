@@ -6,6 +6,13 @@
 	}
 	SubShader
 	{
+        Tags {
+            "Queue"="Transparent"
+            "RenderType"="Transparent"
+        }
+     
+        Blend SrcAlpha OneMinusSrcAlpha
+        
 		// No culling or depth
 		Cull Off ZWrite Off ZTest Always
 
@@ -63,6 +70,7 @@
 
 			fixed4 frag (v2f i) : SV_Target
 			{
+			
 				return CalculateColorFromPointRadialGradient(
 				    i.uv,
                     _GradientParams,

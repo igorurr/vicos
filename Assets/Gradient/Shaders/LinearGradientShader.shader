@@ -6,6 +6,13 @@
 	}
 	SubShader
 	{
+        Tags {
+            "Queue"="Transparent"
+            "RenderType"="Transparent"
+        }
+     
+        Blend SrcAlpha OneMinusSrcAlpha
+        
 		// No culling or depth
 		Cull Off ZWrite Off ZTest Always
 
