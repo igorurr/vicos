@@ -14,12 +14,12 @@ public class GradientRadial : GradientLine {
 	[SerializeField] private Vector2 sfFakeOffset;
 	
 	// двумерный радиус
-	[SerializeField] private float sfRadius;
+	[SerializeField] private Vector2 sfRadius;
 	
 	public GradientRadial (
 		Vector2                     _position,
 		Vector2                     _offset,
-		float                       _radius,
+		Vector2 					_radius,
 		params GradientLinePoint[] _points
 	)
 		:base( _points )
@@ -35,9 +35,9 @@ public class GradientRadial : GradientLine {
 		{
 			// подробные описания всех обозначений смотреть в документации
 			// цифрами указаны позиции в массиве _GradientParams в шейдере
-			sfPosition.x, sfPosition.y, // 0, 1 : точка b (bx, by)
-			sfFakeOffset.x, sfFakeOffset.y,     // 2, 3 : точка c (cx, cy)
-			sfRadius,     				// 4    : радиус, переделать на элипсоидный
+			sfPosition.x, 	sfPosition.y, 	 // 0, 1 : точка b (bx, by)
+			sfFakeOffset.x, sfFakeOffset.y,  // 2, 3 : точка c (cx, cy)
+			sfRadius.x,		sfRadius.y		 // 4, 5 : радиус r (ra, rb)
 		} );
 		
 		base.WriteData( _material );

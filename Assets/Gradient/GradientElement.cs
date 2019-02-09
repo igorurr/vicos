@@ -99,7 +99,7 @@ namespace UI.Effects.Gradient
 		void InitData()
 		{
 			{
-				sfGradientType = GradientType.LINEAR;
+				/*sfGradientType = GradientType.LINEAR;
 
 				sfGradientLinear = new GradientLinear(
 					new Vector2( 0f, 0f ),
@@ -111,7 +111,7 @@ namespace UI.Effects.Gradient
 					new GradientLinePoint( GradientPointType.LINE_MIDDLE_POINT, 0.9f ),
 					new GradientLinePoint( GradientPointType.LINE_COLOR_POINT,  1f, Color.red ),
 					new GradientLinePoint( GradientPointType.LINE_COLOR_POINT, 1f, Color.black )
-				);
+				);*/
 
 				/*sfGradientLinear = new GradientLinear(
 					new Vector2( 0.2f, 0.2f ),
@@ -134,16 +134,16 @@ namespace UI.Effects.Gradient
 			}
 
 			{
-				/*sfGradientType = GradientType.RADIAL;
+				sfGradientType = GradientType.RADIAL;
 
 				sfGradientRadial = new GradientRadial(
 					new Vector2( 0.5f, 0.5f ),
 					new Vector2( 0.5f, 0.5f ),
-					0.4f,
+					new Vector2( 0.5f, 0.5f ),
 					new GradientLinePoint( GradientPointType.LINE_COLOR_POINT,  0,    Color.black ),
 					new GradientLinePoint( GradientPointType.LINE_COLOR_POINT,  0,    Color.red ),
 					new GradientLinePoint( GradientPointType.LINE_COLOR_POINT,  1f,   Color.white )
-				);*/
+				);
 
 			}
 
