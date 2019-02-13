@@ -223,6 +223,18 @@ namespace SceneElements
 		{
 			return a.transform != b.transform;
 		}
+
+		// Update уже занято Unity
+		public void Refresh()
+		{
+			
+		}
+
+		// Destroy уже занято Unity
+		public void Delete()
+		{
+			Destroy();
+		}
 		
 		#endregion
 		
