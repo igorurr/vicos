@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public struct ModelSubscriber
+public class CssSubscriber : CssProperty
 {
-    public SceneComponent Component;
-
-    public ModelSubscriber( SceneComponent _component )
+    public override void ResolveValue( string _value )
     {
-        Component = _component;
+        
+    }
+
+    public override void RerenderSceneElement()
+    {
+
     }
 }

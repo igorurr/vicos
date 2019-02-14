@@ -9,7 +9,6 @@ namespace SceneElements
 {
 	public class SceneElement : StereoBehaviour 
 	{
-		
 		#region Atributes
 
 		#endregion
