@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 // порой свойство зависит от других свойств и как тогда их рендерить - хуй его знает
 
-public class Css
+public static class Css
 {
     public static enum CssResolverType
     {
@@ -22,6 +22,15 @@ public class Css
     };
 
 
-    // или функция возвращающая резольвер
+    // Вернуть первичное свойство по ключу и значению
+    CssFirstProperty Resolve( string key, string value )
+    {
+        
+    }
 
+    // вернуть вторичные свойства по всем первичным
+    List<CssSecondProperty> Resolve( List<CssFirstProperty> properties, List<CssFirstProperty> inheritProperties )
+    {
+        
+    }
 }
