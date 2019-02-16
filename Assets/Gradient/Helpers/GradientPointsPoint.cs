@@ -24,9 +24,9 @@ public class GradientPointsPoint : GradientPointBase
     {
         return new List<float>
         {
-            sfPosition.x,   sfPosition.y, 
-            sfStrong, 
-            sfColor.r,      sfColor.g,     sfColor.b,     sfColor.a
+            sfPosition.x,   sfPosition.y,                             // 0, 1       - позиция
+            sfStrong,                                                 // 2          - вес точки
+            sfColor.r,      sfColor.g,     sfColor.b,     sfColor.a   // 3, 4, 5, 6 - цвет
         };
     }
 

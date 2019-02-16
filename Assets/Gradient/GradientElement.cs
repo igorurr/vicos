@@ -89,11 +89,16 @@ namespace UI.Effects.Gradient
 			
 			a_Image = gameObject.AddComponent(typeof(Image)) as Image;
 			
+			Debug.Log( a_Image.GetComponent<Renderer>() );
+			
 			if ( sfGradientType == GradientType.LINEAR )
-				Material = Resources.Load<Material>("Materials/GradientLinearMaterial");
+				Material = Instantiate( Resources.Load<Material>("Materials/GradientLinearMaterial") );
 
 			else if ( sfGradientType == GradientType.RADIAL )
-				Material = Resources.Load<Material>("Materials/GradientRadialMaterial");
+				Material = Instantiate( Resources.Load<Material>("Materials/GradientRadialMaterial") );
+
+			else
+				Material = Instantiate( Resources.Load<Material>("Materials/GradientPointsMaterial") );
 		}
 
 		void InitData()
@@ -134,7 +139,7 @@ namespace UI.Effects.Gradient
 			}
 
 			{
-				sfGradientType = GradientType.RADIAL;
+				/*sfGradientType = GradientType.RADIAL;
 
 				sfGradientRadial = new GradientRadial(
 					new Vector2( 0.5f, 0.5f ),
@@ -143,11 +148,19 @@ namespace UI.Effects.Gradient
 					new GradientLinePoint( GradientPointType.LINE_COLOR_POINT,  0,    Color.black ),
 					new GradientLinePoint( GradientPointType.LINE_COLOR_POINT,  0,    Color.red ),
 					new GradientLinePoint( GradientPointType.LINE_COLOR_POINT,  1f,   Color.white )
-				);
+				);*/
 
 			}
 
 			{
+				/*sfGradientType = GradientType.POINT;
+
+				sfGradientPoints = new GradientPoints(
+					new GradientPointsPoint( new Vector2(0.2f, 0.3f), 1,  Color.green ),
+					new GradientPointsPoint( new Vector2(0.4f, 0.8f), 1,  Color.red ),
+					new GradientPointsPoint( new Vector2(0.5f, 0.4f), 2f, Color.white ),
+					new GradientPointsPoint( new Vector2(0.8f, 0.9f), 1f, Color.blue )
+				);*/
 
 			}
 		}

@@ -199,6 +199,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 634193577}
+  - {fileID: 2057488226}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -444,7 +445,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 182, y: 70}
   m_SizeDelta: {x: 316, y: 316}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &634193578
@@ -463,12 +464,12 @@ MonoBehaviour:
   sfGradientType: 1
   sfGradientPoints:
     sfPoints:
-    - sfColor: {r: 0, g: 0, b: 0, a: 0}
-      sfPosition: {x: 0, y: 0}
-      sfStrong: 0
-    - sfColor: {r: 0, g: 0, b: 0, a: 0}
-      sfPosition: {x: 0, y: 0}
-      sfStrong: 0
+    - sfColor: {r: 0.4307171, g: 0.7075472, b: 0.377136, a: 0.79607844}
+      sfPosition: {x: 0, y: 1}
+      sfStrong: 1
+    - sfColor: {r: 0, g: 0, b: 1, a: 1}
+      sfPosition: {x: 1, y: 0}
+      sfStrong: 2
   sfGradientRadial:
     sfPoints:
     - sfColor: {r: 0, g: 0, b: 0, a: 0}
@@ -489,7 +490,7 @@ MonoBehaviour:
     sfPosition: {x: 0, y: 0}
     sfOffset: {x: 0, y: 0}
     sfFakeOffset: {x: 0, y: 0}
-    sfRadius: 0
+    sfRadius: {x: 0, y: 0}
   sfGradientLinear:
     sfPoints: []
     sfStart: {x: 0, y: 0}
@@ -541,3 +542,92 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2057488225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2057488226}
+  - component: {fileID: 2057488228}
+  - component: {fileID: 2057488227}
+  m_Layer: 5
+  m_Name: GameObject (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2057488226
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2057488225}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 105822006}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -170, y: -59}
+  m_SizeDelta: {x: 316, y: 316}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2057488227
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2057488225}
+  m_CullTransparentMesh: 0
+--- !u!114 &2057488228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2057488225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8884e68d0bf6bc4da21fc202afd0c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfDebug: 0
+  sfFrequencyRender: 0
+  sfGradientType: 1
+  sfGradientPoints:
+    sfPoints:
+    - sfColor: {r: 1, g: 0, b: 0, a: 1}
+      sfPosition: {x: 1, y: 0}
+      sfStrong: 1
+    - sfColor: {r: 0.1509434, g: 0.033463866, b: 0.033463866, a: 0.7921569}
+      sfPosition: {x: 0, y: 1}
+      sfStrong: 1
+  sfGradientRadial:
+    sfPoints:
+    - sfColor: {r: 0, g: 0, b: 0, a: 0}
+      sfType: 1
+      sfPosition: 0
+    - sfColor: {r: 0, g: 0, b: 0, a: 0}
+      sfType: 0
+      sfPosition: 0
+    - sfColor: {r: 0, g: 0, b: 0, a: 0}
+      sfType: 0
+      sfPosition: 0
+    - sfColor: {r: 0, g: 0, b: 0, a: 0}
+      sfType: 0
+      sfPosition: 0
+    - sfColor: {r: 0, g: 0, b: 0, a: 0}
+      sfType: 0
+      sfPosition: 0
+    sfPosition: {x: 0, y: 0}
+    sfOffset: {x: 0, y: 0}
+    sfFakeOffset: {x: 0, y: 0}
+    sfRadius: {x: 0, y: 0}
+  sfGradientLinear:
+    sfPoints: []
+    sfStart: {x: 0, y: 0}
+    sfEnd: {x: 0, y: 0}
