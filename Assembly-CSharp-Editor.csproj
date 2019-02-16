@@ -10,10 +10,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6BF92AC6-A09D-02EB-5041-CB33C564EAC2}</ProjectGuid>
+    <ProjectGuid>{69B0212E-0AAC-61EE-75B7-992DA8DDB418}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -54,111 +54,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Effects\Gradient\Constants\GradientConstants.cs" />
-    <Compile Include="Assets\Effects\Gradient\GradientElement.cs" />
-    <Compile Include="Assets\Effects\Gradient\Helpers\GradientBase.cs" />
-    <Compile Include="Assets\Effects\Gradient\Helpers\GradientLine.cs" />
-    <Compile Include="Assets\Effects\Gradient\Helpers\GradientLinear.cs" />
-    <Compile Include="Assets\Effects\Gradient\Helpers\GradientLinePoint.cs" />
-    <Compile Include="Assets\Effects\Gradient\Helpers\GradientPointBase.cs" />
-    <Compile Include="Assets\Effects\Gradient\Helpers\GradientPoints.cs" />
-    <Compile Include="Assets\Effects\Gradient\Helpers\GradientPointsPoint.cs" />
-    <Compile Include="Assets\Effects\Gradient\Helpers\GradientRadial.cs" />
-    <Compile Include="Assets\generic\Corutine.cs" />
-    <Compile Include="Assets\generic\CorutinesManager.cs" />
-    <Compile Include="Assets\generic\dobj.cs" />
-    <Compile Include="Assets\generic\MyRandom.cs" />
-    <Compile Include="Assets\generic\olis.cs" />
-    <Compile Include="Assets\generic\StereoBehaviour.cs" />
-    <Compile Include="Assets\generic\Utils.cs" />
-    <Compile Include="Assets\inets\BezierCurveLines\Scripts\BezierCurveCollider2D.cs" />
-    <Compile Include="Assets\inets\Cross Section Shader\Examples\Scripts\PositionController.cs" />
-    <Compile Include="Assets\inets\Cross Section Shader\Examples\Scripts\RotationController.cs" />
-    <Compile Include="Assets\inets\Cross Section Shader\Examples\Scripts\SliderValueToText.cs" />
-    <Compile Include="Assets\inets\Cross Section Shader\Scripts\ArcBall.cs" />
-    <Compile Include="Assets\inets\Cross Section Shader\Scripts\GenericThreePlanesCuttingController.cs" />
-    <Compile Include="Assets\inets\Cross Section Shader\Scripts\OnePlaneCuttingController.cs" />
-    <Compile Include="Assets\inets\Cross Section Shader\Scripts\ThreeAAPlanesCuttingController.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\CallMethodScriptCircle.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\CallMethodScriptTester.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\GameEvents\EventsNotificator.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\GameEvents\MetagameEvents.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\GameEvents\UIManager.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\InvokeTestUI.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\RectTransformTester.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\Views\GameView.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\Views\MainMenuView.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\Views\OptionsView.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\Views\StartGameView.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\Views\ViewEventsTester.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\2D\Parallax.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\CallMethodScript.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\ClickArea.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\GameEvents\EventsListener.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\GameEvents\GameEvent.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\GameEvents\MonoBehaviourSubscribeExtensions.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\GameEvents\WaitForEvent.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\PlatformUIObject.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\RandomUtil.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\SoundEffect.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\UtilsExtensions.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\Views\ViewBase.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\Views\ViewsController.cs" />
-    <Compile Include="Assets\inets\test3.cs" />
-    <Compile Include="Assets\vicos\Component.cs" />
-    <Compile Include="Assets\vicos\DomManager.cs" />
-    <Compile Include="Assets\vicos\DomNode.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\Helpers\Gradient.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\Helpers\ShaderMaterial.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\SceneElement\Helpers\Anchors.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\SceneElement\Helpers\Margin.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\SceneElement\Helpers\TRBL.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\SceneElement\Helpers\WH.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\SceneElement\SceneElement.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\TextElement\Helpers\TextLine.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\TextElement\Helpers\TextLineItem.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\TextElement\Helpers\TextLineItemBox.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\TextElement\Helpers\TextLineItemText.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\TextElement\TextContainer.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\TextElement\TextElement.cs" />
-    <Compile Include="Assets\vicos\Scene\Manager\SceneManager.cs" />
-    <Compile Include="Assets\vicos\VirtualDomNode.cs" />
-    <Compile Include="Assets\View\MeshRenderUnityUI.cs" />
-    <None Include="Assets\Effects\Gradient\Shaders\Helpers\Helpers.cginc" />
-    <None Include="Assets\inets\Portal Shaders\OuterRing.shader" />
-    <None Include="Assets\inets\Cross Section Shader\Shaders\OnePlaneBSP.shader" />
-    <None Include="Assets\shaders\test3.shader" />
-    <None Include="Assets\inets\nubick\Scripts\Shaders\GravitationLensing.shader" />
-    <None Include="Assets\shaders\testt.shader" />
-    <None Include="Assets\inets\Portal Shaders\Walls.shader" />
-    <None Include="Assets\Effects\Gradient\Shaders\Helpers\Debug.cginc" />
-    <None Include="Assets\Effects\Gradient\Shaders\Helpers\LinearGradient.cginc" />
-    <None Include="Assets\Effects\Gradient\Shaders\Helpers\Kernel.cginc" />
-    <None Include="Assets\inets\Cross Section Shader\Shaders\ThreeAAPlanesBSP.shader" />
-    <None Include="Assets\inets\nubick\Scripts\Shaders\Blur.shader" />
-    <None Include="Assets\Effects\Blur\Shaders\Blur.shader" />
-    <None Include="Assets\Effects\Gradient\Shaders\Helpers\Constants.cginc" />
-    <None Include="Assets\inets\nubick\Scripts\Shaders\Square.shader" />
-    <None Include="Assets\Effects\Gradient\Shaders\Helpers\RadialGradient.cginc" />
-    <None Include="Assets\inets\Cross Section Shader\Shaders\GenericThreePlanesBSP.shader" />
-    <None Include="Assets\inets\nubick\Scripts\Shaders\Pixelate.shader" />
-    <None Include="Assets\inets\Cross Section Shader\Shaders\DoubleFaceUnlit.shader" />
-    <None Include="Assets\Effects\Gradient\Shaders\PointsGradientShader.shader" />
-    <None Include="Assets\shaders\test.shader" />
-    <None Include="Assets\inets\Новый текстовый документ.txt" />
-    <None Include="Assets\inets\Portal Shaders\Back.shader" />
-    <None Include="Assets\inets\Portal Shaders\InnerCircle.shader" />
-    <None Include="Assets\inets\Cross Section Shader\Shaders\StincelledUnlitTexture.shader" />
-    <None Include="Assets\inets\Cross Section Shader\Shaders\StandardDoubleFace.shader" />
-    <None Include="Assets\inets\AvatarShader.shader" />
-    <None Include="Assets\shaders\test4.shader" />
-    <None Include="Assets\inets\nubick\Scripts\Shaders\Transparency.shader" />
-    <None Include="Assets\Effects\Gradient\Shaders\Helpers\LineGradient.cginc" />
-    <None Include="Assets\inets\nubick\Scripts\Shaders\Grayscale.shader" />
-    <None Include="Assets\Effects\Gradient\Shaders\Helpers\PointsGradient.cginc" />
-    <None Include="Assets\inets\nubick\Scripts\Shaders\Sprites-Default.shader" />
-    <None Include="Assets\Effects\Gradient\Shaders\RadialGradientShader.shader" />
-    <None Include="Assets\Effects\Gradient\Shaders\LinearGradientShader.shader" />
+    <Compile Include="Assets\inets\BezierCurveLines\Scripts\Editor\BezierCurveCollider2D_Editor.cs" />
+    <Compile Include="Assets\inets\nubick\Scripts\Tests\Editor\RandomUtilTest.cs" />
+    <Compile Include="Assets\inets\nubick\Scripts\Utils\Editor\BuildIcons.cs" />
+    <Compile Include="Assets\inets\nubick\Scripts\Utils\Editor\CallMethodScriptEditor.cs" />
+    <Compile Include="Assets\inets\nubick\Scripts\Utils\Editor\ClickAreaEditor.cs" />
+    <Compile Include="Assets\inets\nubick\Scripts\Utils\Editor\SelectionExtensions.cs" />
+    <Compile Include="Assets\inets\nubick\Scripts\Utils\Editor\SoundEffectEditor.cs" />
+    <Compile Include="Assets\inets\nubick\Scripts\Utils\Editor\TaggedGameObjectsLister.cs" />
+    <Compile Include="Assets\inets\nubick\Scripts\Utils\Views\Editor\ViewBaseEditor.cs" />
+    <Compile Include="Assets\inets\nubick\Scripts\Utils\Views\Editor\ViewsControllerEditor.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Рурик/Desktop/Проекты/Викос/Проект/New Unity Project (4)/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -267,6 +172,9 @@
     <Reference Include="UnityEngine.SharedInternalsModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.SpatialTrackingModule">
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpatialTrackingModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.SpriteMaskModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
     </Reference>
@@ -354,29 +262,98 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TestRunner">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Timeline">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Timeline">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TreeEditor">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.Networking">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="Vuforia.UnityExtensions.Editor">
+      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Vuforia.UnityExtensions">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.GoogleAudioSpatializer">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GoogleAudioSpatializer">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.HoloLens">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.VR">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Rider.Unity.Editor.Plugin.Repacked">
+      <HintPath>C:/Users/Рурик/Desktop/Проекты/Викос/Проект/New Unity Project (4)/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>C:/Users/Рурик/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/Рурик/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.Analytics">
+      <HintPath>C:/Users/Рурик/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/Editor/UnityEditor.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Purchasing">
+      <HintPath>C:/Users/Рурик/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/Рурик/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -723,6 +700,12 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{6BF92AC6-A09D-02EB-5041-CB33C564EAC2}</Project>
+      <Name>Assembly-CSharp</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
