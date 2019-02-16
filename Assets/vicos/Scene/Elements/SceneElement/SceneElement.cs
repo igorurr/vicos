@@ -232,7 +232,7 @@ namespace SceneElements
 		// Destroy уже занято Unity
 		public void Delete()
 		{
-			Destroy();
+			Destroy( gameObject );
 		}
 		
 		#endregion

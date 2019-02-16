@@ -7,30 +7,30 @@ using UnityEngine.UI;
 
 public static class Css
 {
-    public static enum CssResolverType
+    private enum ResolverType
     {
         NUMBER__OR__CSS_OBJECT,
         NUMBER10__OR__CSS_OBJECT,   // число в диаппазоне [0;1]
         PIXELS__OR__CSS_OBJECT,
     }
 
-    public static readonly Dictionary<string, CssResolverType> Propertys = new Dictionary<string, CssResolver>()
+    private static readonly Dictionary<string, ResolverType> Propertys = new Dictionary<string, ResolverType>()
     {
-        { "blur", PIXELS__OR__CSS_OBJECT },
-        { "pixeling", PIXELS__OR__CSS_OBJECT },
-        { "opacity", NUMBER10__OR__CSS_OBJECT }
+        { "blur",         ResolverType.PIXELS__OR__CSS_OBJECT },
+        { "pixeling",     ResolverType.PIXELS__OR__CSS_OBJECT },
+        { "opacity",      ResolverType.NUMBER10__OR__CSS_OBJECT }
     };
 
 
     // Вернуть первичное свойство по ключу и значению
-    CssFirstProperty Resolve( string key, string value )
+    public static CssFirstProperty Resolve( string key, string value )
     {
-        
+        return null;
     }
 
     // вернуть вторичные свойства по всем первичным
-    List<CssSecondProperty> Resolve( List<CssFirstProperty> properties, List<CssFirstProperty> inheritProperties )
+    public static List<CssSecondProperty> Resolve( List<CssFirstProperty> properties, List<CssFirstProperty> inheritProperties )
     {
-        
+        return null;
     }
 }

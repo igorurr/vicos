@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using SceneElements;
 
 
 public abstract class CssSecondProperty
@@ -12,9 +13,8 @@ public abstract class CssSecondProperty
 
     protected SceneElement a_SceneElement;
 
-    public void CssSecondProperty( 
-        List<CssProperty>   _firstInherit,
-        List<CssProperty>   _firstCurrent,
+    public CssSecondProperty( 
+        CssValue            _value,
         CssContainer        _container, 
         SceneElement        _sceneElement
     )
@@ -23,20 +23,15 @@ public abstract class CssSecondProperty
         a_Container     = _container;
         a_SceneElement  = _sceneElement;
 
-        Update( _firstInherit, _firstCurrent );
+        RerenderSceneElement();
     }
 
-    public void Update( 
-        List<CssProperty>   _firstInherit,
-        List<CssProperty>   _firstCurrent
-    )
+    public void Update( CssValue _newValue )
     {
-        CssValue newValue = ResolveValue( _firstInherit, _firstCurrent );
-
-        if( !ShouldRerender( newValue ) )
+        if( !ShouldRerender( _newValue ) )
             return;
 
-        ResolvedValue = newValue;
+        ResolvedValue = _newValue;
 
         RerenderSceneElement();
     }
@@ -50,10 +45,4 @@ public abstract class CssSecondProperty
         // тут будет оптимизация, проверки на простое равенство значений порой не достаточно
         return true;
     }
-
-    // ВАЖНО: функция является простым преобразователем свойств без сложной логики
-    public abstract CssValue ResolveValue(
-        List<CssProperty>   _firstInherit,
-        List<CssProperty>   _firstCurrent
-    );
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,23 +22,23 @@ public class ModelNode
     public void Invoke( dobj _data )
     {
         // тут будет не SceneElement а vicos Component, тут в коде я малясь погаречился
-        if( a_Subscribers.Any() )
+        /*if( a_Subscribers.Any() )
             foreach( ModelSubscriber subscriber in a_Subscribers )
-                subscriber.Update();
+                subscriber.Update();*/
     }
 
-    public void Subscribe( SceneComponent _sceneComponent )
+    /*public void Subscribe( SceneComponent _sceneComponent )
     {
         a_Subscribers.Add( new ModelSubscriber( _sceneComponent ) );
-    }
+    }*/
 
-    public void Unsubscribe( SceneComponent _sceneComponent )
+    /*public void Unsubscribe( SceneComponent _sceneComponent )
     {
         ModelSubscriber subscriber = a_Subscribers.Find( el => el.Component == _sceneComponent );
 
         if( subscriber != null )
             Unsubscribe(subscriber);
-    }
+    }*/
 
     public void Unsubscribe( ModelSubscriber _subscriber )
     {

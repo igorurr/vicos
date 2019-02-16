@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using SceneElements;
 
 /*
     свойства первичны и вторичны, первичные свойства могут зависеть друг от друга, вторичные не могут, первичные свойства могут наследоваться, вторичные не могут
@@ -47,11 +49,11 @@ public class CssContainer
         a_SceneElement      = _sceneElement;
         a_SecondProperties  = new List<CssSecondProperty>();
         Properties          = new List<CssFirstProperty>();
-        a_Inherited         = new Dictionary<CssContainer, CssFirstProperty>();
+        InheritProperties   = new List<CssFirstProperty>();
         
         InitParent( _parent, false );
         
-        if( _values )
+        if( _values != null )
         {
             Update( _values );
         }
@@ -63,7 +65,7 @@ public class CssContainer
         {
             a_Parent.OnUpdate -= CssContainer_OnUpdate;
 
-            a_Inherited.Clear();
+            InheritProperties.Clear();
         }
 
         InitParent( _newParent );
@@ -77,7 +79,7 @@ public class CssContainer
         {
             a_Parent.OnUpdate += CssContainer_OnUpdate;
 
-            a_Inherited = a_Parent.InheritProperties.Copy();
+            InheritProperties = a_Parent.InheritProperties.Copy();
         }
 
         UpdateInherit( needUpdateSecond );
@@ -108,7 +110,7 @@ public class CssContainer
     private void UpdateInherit( bool needUpdateSecond = true )
     {
         // получаем свойства, которые унаследовал предок
-        List<CssSecondProperty> newPropertys = a_Parent.InheritProperties.Copy();
+        List<CssFirstProperty> newPropertys = a_Parent.InheritProperties.Copy();
 
         // получить свойства, которые мы можем унаследовать от своего предка
 

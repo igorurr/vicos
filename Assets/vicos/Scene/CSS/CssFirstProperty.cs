@@ -17,7 +17,7 @@ public abstract class CssFirstProperty
     // предназначен только для обновления зависимых свойств
     public event System.Action OnUpdate;
 
-    public void CssFirstProperty( string _value, CssContainer _container )
+    public CssFirstProperty( string _value, CssContainer _container )
     {
         a_Container = _container;
         Update( _value );
