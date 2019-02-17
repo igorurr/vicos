@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6BF92AC6-A09D-02EB-5041-CB33C564EAC2}</ProjectGuid>
+    <ProjectGuid>{A5CB96D0-4C40-3387-17BC-EBD035892BDE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -23,7 +23,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_2_7;UNITY_2018_2;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_2_7;UNITY_2018_2;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;DEV</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -54,131 +54,76 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Effects\Gradient\Constants\GradientConstants.cs" />
-    <Compile Include="Assets\Effects\Gradient\GradientElement.cs" />
-    <Compile Include="Assets\Effects\Gradient\Helpers\GradientBase.cs" />
-    <Compile Include="Assets\Effects\Gradient\Helpers\GradientLine.cs" />
-    <Compile Include="Assets\Effects\Gradient\Helpers\GradientLinear.cs" />
-    <Compile Include="Assets\Effects\Gradient\Helpers\GradientLinePoint.cs" />
-    <Compile Include="Assets\Effects\Gradient\Helpers\GradientPointBase.cs" />
-    <Compile Include="Assets\Effects\Gradient\Helpers\GradientPoints.cs" />
-    <Compile Include="Assets\Effects\Gradient\Helpers\GradientPointsPoint.cs" />
-    <Compile Include="Assets\Effects\Gradient\Helpers\GradientRadial.cs" />
-    <Compile Include="Assets\generic\Corutine.cs" />
-    <Compile Include="Assets\generic\CorutinesManager.cs" />
-    <Compile Include="Assets\generic\dobj.cs" />
-    <Compile Include="Assets\generic\MyRandom.cs" />
-    <Compile Include="Assets\generic\olis.cs" />
-    <Compile Include="Assets\generic\StereoBehaviour.cs" />
-    <Compile Include="Assets\generic\Utils.cs" />
-    <Compile Include="Assets\inets\BezierCurveLines\Scripts\BezierCurveCollider2D.cs" />
-    <Compile Include="Assets\inets\Cross Section Shader\Examples\Scripts\PositionController.cs" />
-    <Compile Include="Assets\inets\Cross Section Shader\Examples\Scripts\RotationController.cs" />
-    <Compile Include="Assets\inets\Cross Section Shader\Examples\Scripts\SliderValueToText.cs" />
-    <Compile Include="Assets\inets\Cross Section Shader\Scripts\ArcBall.cs" />
-    <Compile Include="Assets\inets\Cross Section Shader\Scripts\GenericThreePlanesCuttingController.cs" />
-    <Compile Include="Assets\inets\Cross Section Shader\Scripts\OnePlaneCuttingController.cs" />
-    <Compile Include="Assets\inets\Cross Section Shader\Scripts\ThreeAAPlanesCuttingController.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\CallMethodScriptCircle.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\CallMethodScriptTester.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\GameEvents\EventsNotificator.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\GameEvents\MetagameEvents.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\GameEvents\UIManager.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\InvokeTestUI.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\RectTransformTester.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\Views\GameView.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\Views\MainMenuView.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\Views\OptionsView.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\Views\StartGameView.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Tests\Views\ViewEventsTester.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\2D\Parallax.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\CallMethodScript.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\ClickArea.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\GameEvents\EventsListener.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\GameEvents\GameEvent.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\GameEvents\MonoBehaviourSubscribeExtensions.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\GameEvents\WaitForEvent.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\PlatformUIObject.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\RandomUtil.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\SoundEffect.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\UtilsExtensions.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\Views\ViewBase.cs" />
-    <Compile Include="Assets\inets\nubick\Scripts\Utils\Views\ViewsController.cs" />
-    <Compile Include="Assets\inets\test3.cs" />
-    <Compile Include="Assets\model\Model.cs" />
-    <Compile Include="Assets\model\ModelAction.cs" />
-    <Compile Include="Assets\model\ModelNode.cs" />
-    <Compile Include="Assets\model\ModelSubscriber.cs" />
-    <Compile Include="Assets\vicos\Component.cs" />
-    <Compile Include="Assets\vicos\DomManager.cs" />
-    <Compile Include="Assets\vicos\DomNode.cs" />
-    <Compile Include="Assets\vicos\Scene\CSS\Css.cs" />
-    <Compile Include="Assets\vicos\Scene\CSS\CssContainer.cs" />
-    <Compile Include="Assets\vicos\Scene\CSS\CssFirstProperty.cs" />
-    <Compile Include="Assets\vicos\Scene\CSS\CssSecondProperty.cs" />
-    <Compile Include="Assets\vicos\Scene\CSS\CssValue.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\Helpers\Gradient.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\Helpers\ShaderMaterial.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\SceneElement\Helpers\Anchors.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\SceneElement\Helpers\Margin.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\SceneElement\Helpers\TRBL.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\SceneElement\Helpers\WH.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\SceneElement\SceneElement.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\TextElement\Helpers\TextLine.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\TextElement\Helpers\TextLineItem.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\TextElement\Helpers\TextLineItemBox.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\TextElement\Helpers\TextLineItemText.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\TextElement\TextContainer.cs" />
-    <Compile Include="Assets\vicos\Scene\Elements\TextElement\TextElement.cs" />
-    <Compile Include="Assets\vicos\Scene\Manager\SceneManager.cs" />
-    <Compile Include="Assets\vicos\VirtualDomNode.cs" />
-    <Compile Include="Assets\View\MeshRenderUnityUI.cs" />
-    <None Include="Assets\Effects\Gradient\Shaders\Helpers\Helpers.cginc" />
-    <None Include="Assets\inets\Portal Shaders\OuterRing.shader" />
-    <None Include="Assets\inets\Cross Section Shader\Shaders\OnePlaneBSP.shader" />
-    <None Include="Assets\shaders\test3.shader" />
-    <None Include="Assets\inets\nubick\Scripts\Shaders\GravitationLensing.shader" />
-    <None Include="Assets\shaders\testt.shader" />
-    <None Include="Assets\inets\Portal Shaders\Walls.shader" />
-    <None Include="Assets\Effects\Gradient\Shaders\Helpers\Debug.cginc" />
-    <None Include="Assets\Effects\Gradient\Shaders\Helpers\LinearGradient.cginc" />
-    <None Include="Assets\Effects\Gradient\Shaders\Helpers\Kernel.cginc" />
-    <None Include="Assets\inets\Cross Section Shader\Shaders\ThreeAAPlanesBSP.shader" />
-    <None Include="Assets\inets\nubick\Scripts\Shaders\Blur.shader" />
-    <None Include="Assets\Effects\Blur\Shaders\Blur.shader" />
-    <None Include="Assets\Effects\Gradient\Shaders\Helpers\Constants.cginc" />
-    <None Include="Assets\inets\nubick\Scripts\Shaders\Square.shader" />
-    <None Include="Assets\Effects\Gradient\Shaders\Helpers\RadialGradient.cginc" />
-    <None Include="Assets\inets\Cross Section Shader\Shaders\GenericThreePlanesBSP.shader" />
-    <None Include="Assets\inets\nubick\Scripts\Shaders\Pixelate.shader" />
-    <None Include="Assets\inets\Cross Section Shader\Shaders\DoubleFaceUnlit.shader" />
-    <None Include="Assets\Effects\Gradient\Shaders\PointsGradientShader.shader" />
-    <None Include="Assets\shaders\test.shader" />
-    <None Include="Assets\inets\Новый текстовый документ.txt" />
-    <None Include="Assets\inets\Portal Shaders\Back.shader" />
-    <None Include="Assets\inets\Portal Shaders\InnerCircle.shader" />
-    <None Include="Assets\inets\Cross Section Shader\Shaders\StincelledUnlitTexture.shader" />
-    <None Include="Assets\inets\Cross Section Shader\Shaders\StandardDoubleFace.shader" />
-    <None Include="Assets\inets\AvatarShader.shader" />
-    <None Include="Assets\shaders\test4.shader" />
-    <None Include="Assets\inets\nubick\Scripts\Shaders\Transparency.shader" />
-    <None Include="Assets\Effects\Gradient\Shaders\Helpers\LineGradient.cginc" />
-    <None Include="Assets\inets\nubick\Scripts\Shaders\Grayscale.shader" />
-    <None Include="Assets\Effects\Gradient\Shaders\Helpers\PointsGradient.cginc" />
-    <None Include="Assets\inets\nubick\Scripts\Shaders\Sprites-Default.shader" />
-    <None Include="Assets\Effects\Gradient\Shaders\RadialGradientShader.shader" />
-    <None Include="Assets\Effects\Gradient\Shaders\LinearGradientShader.shader" />
+    <Compile Include="Assets\Helpers\Corutine.cs" />
+    <Compile Include="Assets\Helpers\CorutinesManager.cs" />
+    <Compile Include="Assets\Helpers\dobj.cs" />
+    <Compile Include="Assets\Helpers\Helpers.cs" />
+    <Compile Include="Assets\Helpers\MyRandom.cs" />
+    <Compile Include="Assets\Helpers\olis.cs" />
+    <Compile Include="Assets\Helpers\StereoBehaviour.cs" />
+    <Compile Include="Assets\Helpers\vectors\v2.cs" />
+    <Compile Include="Assets\Helpers\vectors\v2f.cs" />
+    <Compile Include="Assets\Helpers\vectors\v2i.cs" />
+    <Compile Include="Assets\Helpers\vectors\v4.cs" />
+    <Compile Include="Assets\Helpers\vectors\v4f.cs" />
+    <Compile Include="Assets\Helpers\vectors\v4i.cs" />
+    <Compile Include="Assets\Kosi\Model\Model.cs" />
+    <Compile Include="Assets\Kosi\Model\ModelAction.cs" />
+    <Compile Include="Assets\Kosi\Model\ModelNode.cs" />
+    <Compile Include="Assets\Kosi\Model\ModelSubscriber.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\CSS\Css.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\CSS\CssContainer.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\CSS\CssFirstProperty.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\CSS\CssSecondProperty.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\CSS\CssValue.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Effects\BaseClass\Effect.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Effects\Gradient\Constants\GradientConstants.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Effects\Gradient\Gradient.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Effects\Gradient\Helpers\Base.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Effects\Gradient\Helpers\Line.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Effects\Gradient\Helpers\Linear.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Effects\Gradient\Helpers\PointBase.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Effects\Gradient\Helpers\PointLine.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Effects\Gradient\Helpers\PointPoints.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Effects\Gradient\Helpers\Points.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Effects\Gradient\Helpers\Radial.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Effects\Mask\Mask.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Elements\Element\Element.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Elements\Image\Image.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Elements\LowLevelElement\LowLevelElement.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Elements\TextElement\Helpers\TextLine.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Elements\TextElement\Helpers\TextLineItem.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Elements\TextElement\Helpers\TextLineItemBox.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Elements\TextElement\Helpers\TextLineItemText.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Elements\TextElement\TextContainer.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Elements\TextElement\TextElement.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\GraphicManager\Manager.cs" />
+    <Compile Include="Assets\Kosi\UI\Scene\Manager\SceneManager.cs" />
+    <None Include="Assets\Kosi\UI\Scene\Effects\Gradient\Resources\Kosi.UI.Scene.Effects.Gradient\Shaders\Helpers\Helpers.cginc" />
+    <None Include="Assets\Kosi\UI\Scene\Effects\Gradient\Resources\Kosi.UI.Scene.Effects.Gradient\Shaders\Radial.shader" />
+    <None Include="Assets\Kosi\UI\Scene\Effects\Gradient\Resources\Kosi.UI.Scene.Effects.Gradient\Shaders\Helpers\Debug.cginc" />
+    <None Include="Assets\Kosi\UI\Scene\Effects\Gradient\Resources\Kosi.UI.Scene.Effects.Gradient\Shaders\Helpers\LinearGradient.cginc" />
+    <None Include="Assets\Kosi\UI\Scene\Effects\Gradient\Resources\Kosi.UI.Scene.Effects.Gradient\Shaders\Helpers\Kernel.cginc" />
+    <None Include="Assets\Kosi\UI\Scene\Effects\Blur\Resources\Shaders\Blur.shader" />
+    <None Include="Assets\Kosi\UI\Scene\Effects\Gradient\Resources\Kosi.UI.Scene.Effects.Gradient\Shaders\Helpers\Constants.cginc" />
+    <None Include="Assets\Kosi\UI\Scene\Effects\Gradient\Resources\Kosi.UI.Scene.Effects.Gradient\Shaders\Helpers\RadialGradient.cginc" />
+    <None Include="Assets\Kosi\UI\Scene\Effects\Mask\документация.txt" />
+    <None Include="Assets\Kosi\UI\Scene\Effects\Gradient\Resources\Kosi.UI.Scene.Effects.Gradient\Shaders\Helpers\LineGradient.cginc" />
+    <None Include="Assets\Kosi\UI\Scene\Effects\Gradient\Resources\Kosi.UI.Scene.Effects.Gradient\Shaders\Points.shader" />
+    <None Include="Assets\Kosi\UI\Scene\Effects\Gradient\Resources\Kosi.UI.Scene.Effects.Gradient\Shaders\Helpers\PointsGradient.cginc" />
+    <None Include="Assets\Kosi\UI\Scene\Effects\Mask\Resources\Shaders\Mask.shader" />
+    <None Include="Assets\Kosi\UI\Scene\Effects\Gradient\Resources\Kosi.UI.Scene.Effects.Gradient\Shaders\Linear.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/Рурик/Desktop/Проекты/Викос/Проект/New Unity Project (4)/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Рурик/Desktop/Проекты/Викос/версия5/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Рурик/Desktop/Проекты/Викос/Проект/New Unity Project (4)/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Рурик/Desktop/Проекты/Викос/версия5/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Рурик/Desktop/Проекты/Викос/Проект/New Unity Project (4)/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Рурик/Desktop/Проекты/Викос/версия5/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Рурик/Desktop/Проекты/Викос/Проект/New Unity Project (4)/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Рурик/Desktop/Проекты/Викос/версия5/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
