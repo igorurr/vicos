@@ -19,6 +19,7 @@
 		Pass
 		{
 			CGPROGRAM
+            #pragma debug
 			#pragma vertex vert
 			#pragma fragment frag
 			

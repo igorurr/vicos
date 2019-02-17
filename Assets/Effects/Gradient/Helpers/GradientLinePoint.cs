@@ -3,59 +3,64 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-public class GradientLinePoint : GradientPointBase {
+namespace UI.Effects.Gradient
+{
 
-	[SerializeField] private GradientPointType sfType;
-	[SerializeField] private float sfPosition;
-
-	public GradientLinePoint ( 
-		GradientPointType _type,
-		float                 _position
-	)
+	[Serializable]
+	public class GradientLinePoint : GradientPointBase
 	{
-		sfType     = _type;
-		sfPosition = Mathf.Clamp01( _position );
-	}
 
-	public GradientLinePoint ( 
-		GradientPointType _type,
-		float                 _position,
-		Color                 _color
-	)
-	{
-		sfType     = _type;
-		sfPosition = Mathf.Clamp01( _position );
-		sfColor    = _color;
-	}
+		[SerializeField] private GradientPointType sfType;
+		[SerializeField] private float             sfPosition;
 
-	public override List<float> ToData()
-	{
-		if( sfType == GradientPointType.LINE_COLOR_POINT )
-			return new List<float>
-			{
-				(float)sfType, 									// 0
-				sfPosition, 									// 1
-				sfColor.r, sfColor.g, sfColor.b, sfColor.a		// 2, 3, 4, 5
-			};
-		else
-			return new List<float>
-			{
-				(float)sfType, 	// 0
-				sfPosition		// 1
-			};
-	}
+		public GradientLinePoint (
+			GradientPointType _type,
+			float             _position
+		)
+		{
+			sfType     = _type;
+			sfPosition = Mathf.Clamp01( _position );
+		}
 
-	public override int GetSize()
-	{
-		if( sfType == GradientPointType.LINE_COLOR_POINT )
-			return (int)GradientPointDataSize.LINE_COLOR_POINT;
-		else
-			return (int)GradientPointDataSize.LINE_MIDDLE_POINT;
-	}
+		public GradientLinePoint (
+			GradientPointType _type,
+			float             _position,
+			Color             _color
+		)
+		{
+			sfType     = _type;
+			sfPosition = Mathf.Clamp01( _position );
+			sfColor    = _color;
+		}
 
-	public override GradientPointType GetTypeGradient()
-	{
-		return sfType;
+		public override List<float> ToData()
+		{
+			if ( sfType == GradientPointType.LINE_COLOR_POINT )
+				return new List<float>
+				{
+					(float) sfType,                            // 0
+					sfPosition,                                // 1
+					sfColor.r, sfColor.g, sfColor.b, sfColor.a // 2, 3, 4, 5
+				};
+			else
+				return new List<float>
+				{
+					(float) sfType, // 0
+					sfPosition      // 1
+				};
+		}
+
+		public override int GetSize()
+		{
+			if ( sfType == GradientPointType.LINE_COLOR_POINT )
+				return (int) GradientPointDataSize.LINE_COLOR_POINT;
+			else
+				return (int) GradientPointDataSize.LINE_MIDDLE_POINT;
+		}
+
+		public override GradientPointType GetTypeGradient()
+		{
+			return sfType;
+		}
 	}
 }

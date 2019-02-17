@@ -4,11 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[Serializable]
-public abstract class GradientLine : GradientBase<GradientLinePoint>
+namespace UI.Effects.Gradient
 {
-	protected GradientLine ( params GradientLinePoint[] _points )
-	:base( _points )
+	[Serializable]
+	public abstract class GradientLine : GradientBase<GradientLinePoint>
 	{
+		protected GradientLine ( params GradientLinePoint[] _points )
+			: base( _points )
+		{
+		}
 	}
 }
