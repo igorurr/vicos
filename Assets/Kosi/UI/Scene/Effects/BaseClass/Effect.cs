@@ -1,7 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Serialization;
 
 namespace Kosi.UI.Scene.Effects
@@ -17,8 +20,8 @@ namespace Kosi.UI.Scene.Effects
         #if DEV
         void DebugRenderInit()
         {
-            FrequencyRender = 5;
-            DebugEnable     = true;
+            FrequencyRender = 5f;
+            DebugEnable     = false;
 			
             a_TimeAfterLastRender = 0;
         }
@@ -44,6 +47,8 @@ namespace Kosi.UI.Scene.Effects
 
         protected Elements.Image a_ImageElement;
 
+        protected RenderTexture a_RenderTexture;
+
         public Material Material { get; protected set; }
         
         public RenderTexture Texture { get; protected set; }
@@ -52,7 +57,7 @@ namespace Kosi.UI.Scene.Effects
         
         #region Properties
 
-        protected UnityEngine.UI.Image p_UnityImage
+        protected UnityEngine.UI.RawImage p_UnityImage
         {
             get { return a_ImageElement.UnityImage; }
         }
@@ -61,42 +66,39 @@ namespace Kosi.UI.Scene.Effects
         
         #endregion
 
+        private void Init()
+        {
+            v2i wh = a_ImageElement.WidthHeight.Floor();
+            
+            Material = new Material( p_Shader );
+            
+            a_RenderTexture = new RenderTexture( wh.width, wh.height, 16 );
+
+            p_UnityImage.texture = a_RenderTexture;
+        }
+        
+        protected void Render()
+        {
+            WriteMaterialData();
+            
+            v2i wh = a_ImageElement.WidthHeight.Floor().Abs();
+            
+            Graphic.Manager.CreateEffectTexture( Material, ref a_RenderTexture, wh );
+        }
+
+        protected virtual void WriteMaterialData() { }
+
         protected override void OnAwake()
         {
             base.OnAwake();
             
             a_ImageElement = gameObject.GetComponent(typeof(Elements.Image)) as Elements.Image;
         }
-        
-        protected void Render()
-        {
-            v2i wh        = a_ImageElement.WidthHeight.Floor();
-            Rect rect     = new Rect( 0, 0, wh.width, wh.height );
-            Vector2 pivot = new Vector2( 0.5f, 0.5f );
-            
-            RenderTexture rt = new RenderTexture( wh.width, wh.height, 16 );
-            
-            Material = new Material( p_Shader );
-            WriteMaterialData();
-            
-            Graphic.Manager.CreateEffectTexture( Material, ref rt, wh );
-            
-            Texture2D tex = new Texture2D( wh.width, wh.height );
-            
-            // видимо ReadPixels считывает из RenderTexture.active
-            RenderTexture.active = rt;
-            tex.ReadPixels( rect, 0, 0 );
-            tex.Apply();
-            RenderTexture.active = null;
-
-            Sprite sprite = Sprite.Create( tex, rect, pivot );
-            p_UnityImage.sprite = sprite;
-        }
-
-        protected virtual void WriteMaterialData() { }
 		
         protected override void OnStart() {
             base.OnStart();
+            
+            Init();
             
             Render();
 

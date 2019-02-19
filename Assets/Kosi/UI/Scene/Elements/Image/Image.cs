@@ -11,7 +11,7 @@ namespace Kosi.UI.Scene.Elements
 	{
 		#region Atributes
 		
-		public UnityEngine.UI.Image UnityImage { get; private set; }
+		public UnityEngine.UI.RawImage UnityImage { get; private set; }
 
 		#endregion
 		
@@ -30,14 +30,14 @@ namespace Kosi.UI.Scene.Elements
 		{
 			base.OnAwake();
 
-			UnityImage = gameObject.AddComponent<UnityEngine.UI.Image>();
+			UnityImage = gameObject.AddComponent<UnityEngine.UI.RawImage>();
 		}
 
 		protected override void OnUpdate()
 		{
 			base.OnUpdate();
 
-			this.WidthHeight += new v2f( 1, 0 );
+			//this.WidthHeight += new v2f( 1, 0 );
 		}
 
 		#endregion

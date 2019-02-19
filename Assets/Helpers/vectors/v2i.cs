@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 
 public class v2i : v2<int>
@@ -15,6 +16,11 @@ public class v2i : v2<int>
 	{
 		get { return a_Vector.y; }
 		set { a_Vector.y = value; }
+	}
+
+	public v2i Abs()
+	{
+		return new v2i( Mathf.Abs(x), Mathf.Abs(y) );
 	}
 	
 	public v2i( int _x, int _y )
