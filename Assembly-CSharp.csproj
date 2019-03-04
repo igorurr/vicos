@@ -54,6 +54,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Effects\BaseClass\EffectBase.cs" />
     <Compile Include="Assets\Effects\Gradient\Constants\GradientConstants.cs" />
     <Compile Include="Assets\Effects\Gradient\GradientElement.cs" />
     <Compile Include="Assets\Effects\Gradient\Helpers\GradientBase.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Assets\Effects\Gradient\Helpers\GradientPoints.cs" />
     <Compile Include="Assets\Effects\Gradient\Helpers\GradientPointsPoint.cs" />
     <Compile Include="Assets\Effects\Gradient\Helpers\GradientRadial.cs" />
+    <Compile Include="Assets\Effects\Mask\Mask.cs" />
     <Compile Include="Assets\generic\Corutine.cs" />
     <Compile Include="Assets\generic\CorutinesManager.cs" />
     <Compile Include="Assets\generic\dobj.cs" />
@@ -130,6 +132,7 @@
     <Compile Include="Assets\vicos\Scene\Elements\TextElement\Helpers\TextLineItemText.cs" />
     <Compile Include="Assets\vicos\Scene\Elements\TextElement\TextContainer.cs" />
     <Compile Include="Assets\vicos\Scene\Elements\TextElement\TextElement.cs" />
+    <Compile Include="Assets\vicos\Scene\GraphicManager\GraphicManager.cs" />
     <Compile Include="Assets\vicos\Scene\Manager\SceneManager.cs" />
     <Compile Include="Assets\vicos\VirtualDomNode.cs" />
     <Compile Include="Assets\View\MeshRenderUnityUI.cs" />
@@ -159,6 +162,7 @@
     <None Include="Assets\inets\Portal Shaders\InnerCircle.shader" />
     <None Include="Assets\inets\Cross Section Shader\Shaders\StincelledUnlitTexture.shader" />
     <None Include="Assets\inets\Cross Section Shader\Shaders\StandardDoubleFace.shader" />
+    <None Include="Assets\Effects\Mask\документация.txt" />
     <None Include="Assets\inets\AvatarShader.shader" />
     <None Include="Assets\shaders\test4.shader" />
     <None Include="Assets\inets\nubick\Scripts\Shaders\Transparency.shader" />
@@ -166,6 +170,7 @@
     <None Include="Assets\inets\nubick\Scripts\Shaders\Grayscale.shader" />
     <None Include="Assets\Effects\Gradient\Shaders\Helpers\PointsGradient.cginc" />
     <None Include="Assets\inets\nubick\Scripts\Shaders\Sprites-Default.shader" />
+    <None Include="Assets\Effects\Mask\Shaders\Mask.shader" />
     <None Include="Assets\Effects\Gradient\Shaders\RadialGradientShader.shader" />
     <None Include="Assets\Effects\Gradient\Shaders\LinearGradientShader.shader" />
     <Reference Include="UnityEditor.StandardEvents">
