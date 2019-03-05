@@ -1,0 +1,8 @@
+Kosi.UI.Scene.Elements.Element: объект на сцене по сути является строительным блоком всех компонентов
+Kosi.UI.Scene.Elements.Text
+Kosi.UI.Scene.CSS
+Kosi.UI.Scene.Effects. ...
+Kosi.UI.Scene.GraphicManager
+Kosi.UI.Creator. ... :  переписанный реакт
+Kosi.Model
+Kosi.GameView
