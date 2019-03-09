@@ -155,93 +155,6 @@ bool isx(
     return x > y;
 }
 
-
-
-float3 CalcT1T2T3isx(
-    float2 _b,
-    float2 _c,
-    float2 _d
-) {
-    float firstPath = ( _c.x * _d.y - _d.x * _c.y );
-    
-    float secondPath = _c.y - _d.y;
-    
-    float delim = _c.x - _d.x;
-
-    float t1 = firstPath / delim;
-    
-    float t2 = secondPath / delim;
-
-    float t3 = t1 - _b.y;
-
-    return float3( t1, t2, t3 );
-}
-
-float3 CalcT1T2T3isy(
-    float2 _b,
-    float2 _c,
-    float2 _d
-) {
-    float firstPath = ( _c.x * _d.y - _d.x * _c.y );
-    
-    float secondPath = _d.x - _c.x;
-    
-    float delim = _d.y - _c.y;
-
-    float t1 = firstPath / delim;
-    
-    float t2 = secondPath / delim;
-
-    float t3 = t1 - _b.x;
-
-    return float3( t1, t2, t3 );
-}
-
-
-
-float3 CalcSQABCisx(
-    float2 _b,
-    float2 _r,
-    float  _t2,
-    float  _t3
-) {
-    float sqa = sqr( _r.y ) + sqr( _r.x * _t2 );
-    
-    float sqb = 2 * _b.x * sqr( _r.y ) - 2 * sqr( _r.x ) * _t2 * _t3;
-
-    float sqc = sqr( _r.y * _b.x ) + sqr( _r.x * _t3 ) - sqr( _r.x * _r.y );
-
-    return float3( sqa, sqb, sqc );
-}
-
-float3 CalcSQABCisy(
-    float2 _b,
-    float2 _r,
-    float  _t2,
-    float  _t3
-) {
-    float sqa = sqr( _r.x ) + sqr( _r.y * _t2 );
-    
-    float sqb = 2 * _b.y * sqr( _r.x ) - 2 * sqr( _r.y ) * _t2 * _t3;
-
-    float sqc = sqr( _r.x * _b.y ) + sqr( _r.y * _t3 ) - sqr( _r.x * _r.y );
-
-    return float3( sqa, sqb, sqc );
-}
-
-// передаются параметры квадратного уравнения: a, -b, c
-// ВАЖНО: b передаётся именно со знаком -
-// возвращается один корень со знаком -sqrt(D)
-float CalcSqareEquation(
-    float3 _sqABC
-) {
-    float sqrtD = sqrt( sqr( _sqABC.y ) - 4 * _sqABC.x * _sqABC.z );
-
-    return ( _sqABC.b - sqrtD ) / ( 2 * _sqABC.x );
-}
-
-
-
 /*
     текущая точка имеет дробные координаты
     точке [0;0] соответствует левый нижний угол, точке [1;1] правый верхний
@@ -261,35 +174,69 @@ float4 CalculateColorFromPointRadialGradient(
     float2 b = float2( _gradientParams[0], _gradientParams[1] );    // центр элипса радиального градиента
     float2 c = float2( _gradientParams[2], _gradientParams[3] );    // центр радиального градиента (точка в которую сходятся все проекции цветолиний)
     float2 r = float2( _gradientParams[4], _gradientParams[5] );    // радиус элипса градиента, с элипса описываемого этим радиусом и центром в точке b исходят проекции цветолиний
+    float2 e;
     
-    float  l;
-    
-    // проверка, какой знаменатель по модулю больше
-    // берём первый или второй вид уравнения в зависимости от знаменателя
     if ( isx( c, _d ) ) {
-        float3 t123 = CalcT1T2T3isx( b, c, _d );
-
-        float3 sqABC = CalcSQABCisx( b, r, t123.y, t123.z );
-
-        // вычисляем координату x точки e
-        float ex = CalcSqareEquation( sqABC );
-
-        l = lexp( ex, c.x, _d.x );
-        //return float4(l,l,l,1);
+    
+        float  k     = (_d.y - c.y) / (_d.x - c.x);
+        float  b1    = _d.y - _d.x* k;
+        float  t     = b1 - b.y;
+        float  sqA   = r.y * r.y + r.x * r.x * k * k;
+        float  sqB   = 2 * ( r.x * r.x * k * t - r.y * r.y * b.x );
+        float  sqC   = r.y * r.y * b.x * b.x + r.x * r.x * t * t - r.y * r.y * r.x * r.x;
+        
+        float sqD = sqrt( sqB * sqB - 4 * sqA * sqC );
+        float x1 = ( -sqB + sqD ) / ( 2 * sqA );
+        float x2 = ( -sqB - sqD ) / ( 2 * sqA );
+        
+        float x;
+        float y;
+    
+        if( -_d.x + c.x + c.y < _d.y )
+        {
+            x = x1;
+            y = k * x + b1;
+        }
+        else
+        {
+            x = x2;
+            y = k * x + b1;
+        }
+        
+        e = float2(x,y);
     }
     else {
-        float3 t123 = CalcT1T2T3isy( b, c, _d );
-
-        float3 sqABC = CalcSQABCisy( b, r, t123.y, t123.z );
-
-        // вычисляем координату y точки e
-        float ey = CalcSqareEquation( sqABC );
-
-        l = lexp( ey, c.y, _d.y );
-        //return float4(l,l,l,1);
+    
+        float k   = (_d.x - c.x) / (_d.y - c.y);
+        float b1  = _d.x - _d.y * k;
+        float t   = b1 - b.x;
+        float sqA = r.x * r.x + r.y * r.y * k * k;
+        float sqB = 2 * ( r.y * r.y * k * t - r.x * r.x * b.y );
+        float sqC = r.x * r.x * b.y * b.y + r.y * r.y * t * t - r.y * r.y * r.x * r.x;
+        
+        float sqD = sqrt( sqB * sqB - 4 * sqA * sqC );
+        float y1 = ( -sqB + sqD ) / ( 2 * sqA );
+        float y2 = ( -sqB - sqD ) / ( 2 * sqA );
+        
+        float x;
+        float y;
+    
+        if( -_d.x + c.x + c.y < _d.y )
+        {
+            y = y1;
+            x = k * y + b1;
+        }
+        else
+        {
+            y = y2;
+            x = k * y + b1;
+        }
+        
+        e = float2(x,y);
     }
     
-    // вычисление цвета текущей точки по позиции на проекции цветолинии градиента
+    float l = lexp( e, c, _d );
+    
     return CalculateColorOnLine( 
         l, 
         _gradientCountPoints,
