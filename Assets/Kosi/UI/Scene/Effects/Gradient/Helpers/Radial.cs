@@ -8,13 +8,15 @@ namespace Kosi.UI.Scene.Effects.Gradient
 	[Serializable]
 	public class Radial : Line
 	{
+		// x, y
+		[SerializeField] private Vector2 sfRealOffset;
 
 		// позиция центра
 		[SerializeField] private Vector2 sfPosition;
 
 		// позиция крайней точки
+		// r, alpha
 		[SerializeField] private Vector2 sfOffset;
-		[SerializeField] private Vector2 sfFakeOffset;
 
 		// двумерный радиус
 		[SerializeField] private Vector2 sfRadius;
@@ -28,7 +30,6 @@ namespace Kosi.UI.Scene.Effects.Gradient
 			: base( _points )
 		{
 			sfPosition   = _position;
-			sfFakeOffset = _offset.Clamp01();
 			sfRadius     = _radius;
 		}
 
@@ -39,8 +40,8 @@ namespace Kosi.UI.Scene.Effects.Gradient
 				// подробные описания всех обозначений смотреть в документации
 				// цифрами указаны позиции в массиве _GradientParams в шейдере
 				sfPosition.x, 	sfPosition.y, // 0, 1 : точка b (bx, by)
-				sfFakeOffset.x, sfFakeOffset.y, // 2, 3 : точка c (cx, cy)
-				sfRadius.x,		sfRadius.y   // 4, 5 : радиус r (ra, rb)
+				sfRealOffset.x, sfRealOffset.y, // 2, 3 : точка c (cx, cy)
+				sfRadius.x,		sfRadius.y,   // 4, 5 : радиус r (ra, rb)
 			} );
 
 			base.WriteData( _material );

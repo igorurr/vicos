@@ -11,6 +11,13 @@ float lexp( float a, float b, float res ) {
     return ( res - a ) / ( b - a );
 }
 
+float lexp( float2 a, float2 b, float2 res ) {
+    if( abs( a.x - b.x ) > abs( a.y - b.y ) )
+        return ( res.x - a.x ) / ( b.x - a.x );
+    else
+        return ( res.y - a.y ) / ( b.y - a.y );
+}
+
 float sqr( float x ) {
     return x * x;
 }
