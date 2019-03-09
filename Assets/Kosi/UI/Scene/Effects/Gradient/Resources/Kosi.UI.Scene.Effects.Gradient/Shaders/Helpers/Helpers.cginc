@@ -18,6 +18,24 @@ float lexp( float2 a, float2 b, float2 res ) {
         return ( res.y - a.y ) / ( b.y - a.y );
 }
 
+
+
+
+int FloatCompare( float a, float b, float eps=0.000000001 )
+{
+    if( b - a > eps )
+        return 1;
+
+    if( a - b > eps )
+        return -1;
+
+    return 0;
+}
+
+
+
+
+
 float sqr( float x ) {
     return x * x;
 }
